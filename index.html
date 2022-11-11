@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/base16/atlas.min.css"
+        integrity="sha512-zAifE3claO+/HW1U03Rhi/F74xMzp+X+5HpN55SJY2dBMvBg3FKO12adWRpWSwaT4FAtjsWOJkyW4zfGLY9uzA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+
+    <title>JSpractice</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+          <label class="logo navbar-brand " href="#">JS<span >Practice</span></label >
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Exercice1</a>
+              <a class="nav-link" href="#ex1">Exercice2</a>
+              <a class="nav-link" href="#ex2">Exercice3</a>
+              <a class="nav-link" href="#ex3">Exercice4</a>
+              <a class="nav-link" href="#ex4">Exercice5</a>
+              <a class="nav-link" href="#ex5">Exercice6</a>
+              <a class="nav-link" href="#ex6">Exercice7</a>
+              <a class="nav-link" href="#">Exercice8</a>
+              <a class="nav-link" href="#">Exercice9</a>
+              <a class="nav-link" href="#">Exercice10</a>
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <!-- <nav class="flex gap align-center">
+        <!-- <img src="./images/logo.png" id="logo" style="width: 1.5em ;"/> -->
+        <!-- <label class="logo">JS<span class="logo">Practice</span> </label>
+        <ul class="flex gap align-center">
+            <!-- <li> <a href="#ex1">Exercice1</a></li>
+            <li><a href="#ex2">Exercice2</a></li>
+            <li><a href="#ex3">Exercice3</a></li>
+            <li><a href="#ex4">Exercice4</a></li> -->
+            <!-- <li><a href="#ex5">Exercice5</a></li>
+            <li><a href="#ex6">Exercice6</a></li>
+            <li><a href="#ex7">Exercice7 </a></li>
+            <li><a href="#ex8">Exercice8</a></li>
+            <li><a href="#ex9">Exercice9</a></li>
+            <li><a href="#ex10">Exercice10</a></li>
+
+
+        </ul>
+    </nav> --> 
+    <header class=" wrapper flex column align-center">
+
+
+
+        <h1> Apprendre <span>Javascript,</span> !!</h1>
+        <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
+        <button>Learn more</button>
+
+    </header>
+    <section class=" wrapper flex column gap" id="ex1">
+        <h2>Permutation de deux nombres</h2>
+        <div class="enance flex column gap">
+            <h3>Enoncé</h3>
+            <p>Ecrire un script qui permute deux nombres saisis dans deux inputs</p>
+        </div>
+        <div class="demo-code">
+            <div class="demo-code">
+                <div class="demo flex column gap">
+                    <h3>Démo</h3>
+                    <div class="row flex gap align-center">
+                        <form name="form" class="paragraph2">   
+                            <input type="text" name="a" >
+                            <input type="button" value="/" onClick="permuter()" class="cn">
+                            <input type="text" name="b" >
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="code-source">
+            <h3>Code source</h3>
+            <pre>
+                <code>
+            function permuter(){
+                x=document.form.a.value;
+                document.form.a.value=document.form.b.value;
+                document.form.b.value=x;
+            }
+                </code>
+            </pre>
+        </div>
+
+    </section>
+
+    <!-- EXERCICE 2 -->
+    <section class=" wrapper flex column gap" id="ex2">
+        <h2 >Valider une date</h2>
+        <div class="enance flex column gap">
+            <h3>Enoncé</h3>
+            <p>Ecrire un script qui permet de saisir les trois champs d'une date (jour, mois et annee) et d'indiquer si la date est correcte ou non.</p>
+        </div>
+        <div class="demo-code">
+            <div class="demo-code">
+                <div class="demo flex column gap">
+                    <h3>Démo</h3>
+                    <div class="row flex gap align-center">
+                        <form name="date" class="paragraph6">
+                            <input type="text"  id="day" placeholder="j"/>
+                            <input type="text"  id="month" placeholder="m"/>
+                            <input type="text"  id="year" placeholder="a"/>
+                            <input type="button" value="check date" onclick="main()" class="btn">
+                        </form>
+                    </div>
+                    <p id="RESULTS">results</p>
+
+                  
+                    
+
+                </div>
+            </div>
+        </div>
+        <div class="code-source">
+            <h3>Code source</h3>
+            <pre>
+                <code>
+                function main() {
+                    let RESULTS = document.getElementById("RESULTS");
+                    let j = document.getElementById("day").value;
+                    let m = document.getElementById("month").value;
+                    let a = document.getElementById("year").value;
+                    var bissextille = true;
+                    var cas1;
+                    var cas2;
+                    var cas3;
+                    var cas4;
+                    bissextille = a % 400 != 0 && a % 4 != 0 && a % 100 == 0;
+                    cas1 = a > 0 && (m === 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 
+                    ||m == 12)  && (j >= 1 && j <= 31);
+                    cas2 = a > 0 && (m == 4 || m == 6 || m == 9 || m == 11) && (j >= 1 && j <= 30);
+                    cas3 = a > 0 && m == 2 && !bissextille && (j >= 1 && j <= 28);
+                    cas4 = a > 0 && m == 2 && bissextille && (j >= 1 && j <= 29);
+                        if (cas1 || cas2 || cas3 || cas4) {
+                            RESULTS.innerHTML="est valide"
+                        }
+                        else {
+                            RESULTS.innerHTML="est in valide"
+                        }
+                    }
+                </code>
+            </pre>
+
+
+    </section>
+     <!-- EXERCICE 3 -->
+     
+    <section class=" wrapper flex column gap" id="ex3">
+        <h2>Table de multiplication</h2>
+        <div class="enance flex column gap">
+            <h3>Enoncé</h3>
+            <p>Afficher la table de multiplication d’un nombre saisi par l’utilisateur dans un input.</p>
+        </div>
+        <div class="demo-code">
+            <div class="demo-code">
+                <div class="demo flex column gap">
+                    <h3>Démo</h3>
+                    <div class="row flex gap align-center">
+                        <label for="num1"> Entrer un nombre entier</label>
+                    <input type="text" id="num" size="1">
+                    </div>
+
+                    <div class="row flex gap align-center">
+                        <button onclick="table();">Générer la table</button>
+                        <p id="res"></p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="code-source">
+            <h3>Code source</h3>
+            <pre>
+                <code>
+        function table() {
+            var num = parseFloat(document.getElementById("num").value);
+            
+            // var res = ;
+            
+            for (let i = 0; i <= 10; i++) {
+                var res = (i, " * ", num, " = ", i * num);
+                var p = document.createElement("p");
+            
+                document.getElementById("res").innerHTML = res;
+            }
+            }
+                </code>
+            </pre>
+        </div>
+    </section>
+            <!-- EXERCICE 4 -->
+    <section class=" wrapper flex column gap" id="ex4">
+        <h2>Devine le nombre !</h2>
+        <div class="enance flex column gap">
+            <h3>Enoncé</h3>
+            <p>L’utilisateur doit deviner un nombre entre 1 et 50 que le programme a choisi aléatoirement en 10 tentatives. Quand l’utilisateur entre une valeur, on lui affiche le nombre de tentatives restantes, ainsi qu’un message indiquant si sa réponse est correcte ou pas.</p>
+        </div>
+        <div class="demo-code">
+            <div class="demo-code">
+                <div class="demo flex column gap">
+                    <h3>Démo</h3>
+                    <form class="paragraph6 row flex gap align-center">
+                        <h4>Choisier un nombre entre 1 to 100!</h4>
+                        <input type="text" id="essayer">
+                        <input type="button" value="Envoyer" onclick="tester()" id="button" class="btn">
+                         <p id="top"></p> 
+                        <p id="resultat"></p>
+                        
+                 </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="code-source">
+            <h3>Code source</h3>
+            <pre>
+                <code>
+            var randomNr = Math.floor(Math.random() *100) + 1 ;
+            const hestorique = document.getElementById('top');
+            const resultat = document.getElementById('resultat');
+            const essayer = document.getElementById('essayer');
+            const button = document.getElementById('button');
+            var geussNr = 1
+
+            function tester(){
+                var Nruser = Number(essayer.value);
+                if (geussNr === 1){
+                    hestorique.textContent = 'vos teste:  '  ;
+                }
+                hestorique.textContent += Nruser + ' ';
+                if (Nruser === randomNr)  resultat.textContent = 'bravo '
+                else if (geussNr === 10)   resultat.textContent = 'le bon Nr : ' +randomNr;button.disable=true;
+                geussNr++
+                essayer.value = '';
+            }
+                </code>
+            </pre>
+        </div>
+     </section>
+
+    <!-- EXERCICE 5 -->
+    <section class=" wrapper flex column gap " id="ex6">
+        <h2>Losange en étoiles</h2>
+        <div class="enance flex column gap">
+            <h3>Enoncé</h3>
+            <p>Ce programme a pour objectif de dessiner un losange en étoiles dont la longueur des diagonales est un nombre impair saisi par l’utilsateur. Dans le cas où l’utilisateur entre un nombre pair, il faut afficher une erreur. </p>
+        </div>
+        <div class="demo-code">
+            <div class="demo-code">
+                <div class=" demo  flex column gap">
+                    <h3>Démo</h3>
+                    <form class="paragraph2 row flex gap">
+                        <label for="la valure de n">Saisir la longueur des diagonales </label>
+                        <input name="la valure de n" type="number" id="n">
+                         <input type="button" value="Dessiner" id="button" onclick="pernumb()">
+                         <p id="invalid">  </p>
+                         <p id="star"></p>
+                     </form>
+                </div>
+            </div>
+        </div>
+        <div class="code-source">
+            <h3>Code source</h3>
+            <pre>
+                <code>
+                    function pernumb(){
+                        let invalid = document.getElementById('invalid');
+                        let n = document.getElementById('n').value;
+                    if(n % 2 == 0 ){
+                    invalid.innerHTML="est in valide"
+                    }
+                    else{
+                        lons()
+                    }
+                    
+                    function lons(){
+                        let n = document.getElementById('n').value
+                    let string = "";
+                    // Upside pyramid
+                    for (let i = 1; i <= n - 2; i++) {
+                    // printing spaces
+                    for (let j = n; j > i; j--) {
+                    string += " ";
+                    }
+                    // printing star
+                    for (let k = 0; k < i * 2 - 1; k++) {
+                    string += "";
+                    }
+                    string += "\n";
+                    }
+                    // downside pyramid
+                    for (let i = 1; i <= n  ; i++) {
+                    // printing spaces
+                    for (let j = 0; j < i; j++) {
+                    string += " ";
+                    }
+                    // printing star
+                    for (let k = (n - i) * 2 - 1; k > 0; k--) {
+                    string += "*";
+                    }
+                    string += "\n";
+                    }
+                    
+                    document.getElementById('star').innerHTML= (`<pre>${string}</pre>`);
+                    }
+                    }
+                </code>
+            </pre>
+        </div>
+    </section>
+
+       <!-- EXERCICE 6 -->
+
+    <section class=" wrapper flex column gap " id="ex6">
+        <h2>Calculatrice</h2>
+        <div class="enance flex column gap">
+            <h3>Enoncé</h3>
+            <p>Créez 4 fonctions Javascript (Somme, Soustraction, Division, Multiplication). L’utilisateur saisie deux
+                nombres dans deux inputs, choisi ensuite une opération arithmétique. Le résultat est donné par l’une des
+                4 fonctions Javascript. </p>
+        </div>
+        <div class="demo-code">
+            <div class="demo-code">
+                <div class=" demo  flex column gap">
+                    <h3>Démo</h3>
+                   <div class="row">
+                    <label for="num1"> Entrer le premier Num</label>
+                    <input type="text" id="num1">
+                   </div>
+                   <div class="row">
+                    <label for="num2"> Entrer le deuxieme Num</label>
+                    <input type="text" id="num2">
+
+                   </div>
+                   <div class="row">
+                    <label for="operators">Choisir l'opération</label>
+                    <select id="operators">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="/">/</option>
+                        <option value="X">X</option>
+                    </select>
+                   </div>
+                   <div class="row">
+                    <button onclick="calc();">Resultat</button>
+                    <input type="text" id="result">
+
+                   </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="code-source">
+            <h3>Code source</h3>
+            <pre>
+                <code>
+        function calc()
+        {
+        var num1 = parseFloat(document.getElementById('num1').value);
+        var num2 = parseFloat(document.getElementById('num2').value); 
+        var oper = document.getElementById('operators').value;
+
+        if(oper === '+')
+        {
+            document.getElementById('result').value = num1+num2;
+        }
+
+        if(oper === '-')
+        {
+            document.getElementById('result').value = num1-num2;
+        }
+
+        if(oper === '/')
+        {
+            document.getElementById('result').value = num1/num2;
+        }
+
+        if(oper === 'X')
+        {
+            document.getElementById('result').value = num1*num2;
+        }
+        console.log(num1)
+        }
+                </code>
+            </pre>
+        </div>
+    </section>
+  
+     <!-- EXERCICE 7 -->
+    <section class=" wrapper flex column gap" id="ex7">
+        <h2>Recherche et suppression dans une chaine</h2>
+        <div class="enance flex column gap">
+            <h3>Enoncé</h3>
+            <p>Ecrire un programme Javascript qui demande à l’utilisateur de saisir une phrase dans une zone de texte et
+                un mot dans une autre zone de texte. Le clique sur le bouton rechercher affiche un message si le mot
+                existe dans la phrase ou non. Le clique sur le bouton supprimer permet d’effacer toutes les occurrence
+                du mot dans la phrase ( si le mot existe bien sûr). </p>
+        </div>
+        <div class="demo-code">
+            <div class="demo-code">
+                <div class="demo flex column gap">
+                    <h3>Démo</h3>
+                    <div class="row flex gap align-center">
+                        <label for="phrase">Saisir une phrase</label>
+                    <input type="text" id="phrase">
+                    <button onclick="filtered()" type="submit">Rechercher</button>
+                    </div>
+
+                    <div class="row flex gap align-center">
+                        <label for="mot">Saisir le mot à rechercher ou à supprimer</label>
+                    <input type="text" id="mot">
+                    <button onclick="deleted()">Supprimer les occurences</button>
+                    </div>
+
+                    <p id="showResult"></p>
+    
+                </div>
+            </div>
+        </div>
+        <div class="code-source">
+            <h3>Code source</h3>
+            <pre>
+                <code>
+                // Recherche  dans une chaine
+            function filtered() {
+            var phrase = document.getElementById("phrase").value;
+            var mot = document.getElementById("mot").value;
+            var showResult = document.getElementById("showResult");
+
+            if (phrase.includes(mot)) {
+            return (showResult.innerHTML =
+            "bravo :" + " " + mot + "  " + "est se trouve dans la phrase");
+            } else {
+            showResult.innerHTML = "Erreur aucun resultat ";
+            }
+            }
+            // Suppression dans une chaine
+            function deleted() {
+            var phrase = document.getElementById("phrase").value;
+            var mot = document.getElementById("mot").value;
+
+            phrase.replace(mot, "");
+            return (document.getElementById("p").innerHTML = phrase.replace(mot, ""));
+            }
+                </code>
+            </pre>
+        </div>
+
+    </section>
+
+
+    <!-- EXERCICE 8 -->
+    <section class="wrapper flex column gap" id="ex8">
+        <h2>Compter le nombre de voyelles dans une chaine</h2>
+        <div class="enance flex column gap">
+            <h3>Enoncé</h3>
+            <p>Ecrire un programme Javascript qui permet de calculer le nombre de voyelles (a,e,i,o,u,y) dans une phrase
+                saisie par l’utilisateur.</p>
+        </div>
+        <div class="demo-code">
+            <div class="demo-code">
+                <div class="demo flex column gap">
+                    <h3>Démo</h3>
+                    <div class="row">
+                        <label for="textInput">Saisir une phrase</label>
+                    <input type="text" id="textInput">
+                    </div>
+                    <div class="row flex gap">
+                        <button onclick="compteVoyelles()">Compter les voyelles</button>
+                        <p id="showVoyelle"></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="code-source">
+            <h3>Code source</h3>
+            <pre>
+                <code >
+            function compteVoyelles(){
+            let inputText = document.getElementById("textInput").value
+            let res = document.getElementById('resultat')
+            counter= 0;
+            for (  i = 0; i <= inputText.length - 1; i++ ){
+                if( (inputText.charAt(i)== "a") ||
+                    (inputText.charAt(i)== "e") || (inputText.charAt(i)== "i") ||
+                    (inputText.charAt(i)== "o") || (inputText.charAt(i)== "y")){
+                counter++;
+                }
+            }
+            return res.innerHTML= ("la phrase contient " +" "+ counter+"" +" de voyelles")
+            }
+             </code>
+            </pre>
+        </div>
+    </section>
+
+
+    <section class="wrapper flex column gap" id="ex9">
+        <h2>Tri d’un tableau</h2>
+        <div class="enance flex column gap">
+            <h3>Enoncé</h3>
+            <p>Ecrire un programme Javascript qui permet de trier un tableau d’entier (Utiliser n’importe quel
+                algorithme de tri mais surtout pas la fonction Sort de l’objet Array).
+                L’utilisateur commence tout d’abord par saisir la taille du tableau, ensuite il remplit le tableau pour
+                cliquer à la fin sur un bouton trier : celui-ci affichera le tableau en ordre croissant ou décroissant.
+            </p>
+        </div>
+        <div class="demo-code">
+            <div class="demo-code">
+                <div class="demo flex column gap">
+                    <h3>Démo</h3>
+                    <div class="row flex gap align-center">
+                        <label>Donner la taille du tableau</label>
+                    <input type="number" id="row"> <input type="button" name="Tableau" value="Valider"
+                        onclick="addTable()">
+                    </div>
+                    <div class="row flex gap align-center">
+                        <label>Veuiller remplir le tableau</label>
+                        <table id="table"></table>
+                    </div>
+                    <div class="row flex gap align-center">
+                        <input type="button" name="Bt1" value="Trier" onClick="trie()">
+
+                    <table id="table2"></table>
+                    </div>
+                    
+                  
+
+                   
+                    
+
+                </div>
+            </div>
+        </div>
+
+        <div class="code-source">
+            <h3>Code source</h3>
+            <pre>
+                <code>
+        function addTable() {
+        let row = document.form.row.value;
+
+        for (let i = 1; i <= row; i++) { let addInput=document.createElement("input"); addInput.type="text"
+            ; addInput.name="unsorteddNumbers[]" ; addInput.size=2;
+            document.getElementById("table").appendChild(addInput); } } function bubleSort(inputNodes) { let
+            values=[]; for (let i=0; i < inputNodes.length; i++) { values.push(inputNodes[i].value); } for
+            (let i=0; i < values.length; i++) { for (j=i + 1; j < values.length; j++) { if (values[i]>
+            values[j]) {
+            temp = values[i];
+            values[i] = values[j];
+            values[j] = temp;
+                        }
+                    }
+                }
+
+            return values;
+            }
+
+            function trie() {
+    
+
+            let sortedValues = bubleSort(
+            document.getElementsByName("unsorteddNumbers[]")
+            );
+
+            sortedValues.forEach(function (inputValue) {
+            let newInput = document.createElement("input");
+            newInput.type = "text";
+            newInput.size = 2;
+            newInput.name = "sorteddNumbers[]";
+            newInput.value = inputValue;
+
+            document.getElementById("table2").appendChild(newInput);
+            });
+            }
+                </code>
+            </pre>
+        </div>
+    </section>
+
+   
+    <section class="wrapper flex column gap" id="ex10">
+        <h2>Recherche dans un tableau</h2>
+        <div class="enance flex column gap">
+            <h3>Enoncé</h3>
+            <p>Ecrire un programme Javascript qui permet de rechercher une valeur dans un tableau d’entier.
+                L’utilisateur doit suivre les étapes suivantes :
+                1. Saisir la taille du tableau,
+                2. Remplir le tableau par des entiers
+                3. Introduire la valeur à rechercher
+                4. Cliquer sur le boutons « Rechercher »
+                Le programme affiche ensuite un message si la valeur à rechercher existe ou non dans le tableau.</p>
+
+        </div>
+
+        <div class="demo-code">
+            <div class="demo-code">
+                <div class="demo flex column gap">
+                    <h3>Démo</h3>
+                    <div class="row flex gap align-center">
+                        <label>Donner la taille du tableau</label>
+                    <input type="number" id="Row"> <input type="button" name="tbl" value="Valider"
+                        onclick="AddTable()">
+                    </div>
+                    <div class="row flex gap align-center">
+                        <label>Veuiller remplir le tableau</label>
+                        <table id="Table"></table>
+
+                    </div>
+                    <div class="row flex gap align-center">
+                        <label> Donner la valeur à rechercher dans le tableau </label>
+                        <input type="number" name="item" id="search-value">
+                        <input type="button" name="Bt2" id="Bt2" value="Recherche" onclick="Filtered()">
+                    </div>
+                    <p id="rslt"></p>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="code-source">
+            <h3>Code source</h3>
+                <pre>
+                <code>
+            // Creer le Tableau
+
+            function AddTable() {
+                let row = document.getElementById('Row').value;
+                
+                for (let i = 1; i <= row; i++) {
+                    let addInput = document.createElement("input");
+                    addInput.type = "text";
+                    addInput.name = "unsorteddNumbers[]";
+                    addInput.size = 1;
+                    document.getElementById("Table").appendChild(addInput);
+                }
+                }
+                //   chercher dans le Tableau
+
+            function filtered() {
+
+                let inputValue = document.getElementById("search-value").value;
+                let sortedValues = document.getElementsByName("unsorteddNumbers[]");
+                let founded = false;
+                sortedValues.forEach(function(element) {
+
+                if(element.value == inputValue) {
+                founded = true;
+
+                }
+                });
+
+                if(founded) {
+            document.getElementById('rslt').innerHTML= `your search is found: ${inputValue} `
+                } else {
+
+            document.getElementById('rslt').innerHTML= `the value  ${inputValue} not found`
+
+                }
+            }
+                </code>
+                </pre>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script> hljs.highlightAll();</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+
+</html>
